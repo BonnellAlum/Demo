@@ -1,0 +1,91 @@
+{
+  "title": "Create WorkOrder",
+  "description": "Creates new WorkOrder",
+  "variables": {
+    "createWorkOrderChainInProgress": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "workOrder": {
+      "type": "page:createWorkOrderRequest"
+    }
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.createWorkOrderRequest": {
+      "endpoint": "create_WorkOrder",
+      "service": "businessObjects",
+      "path": "request"
+    },
+    "businessObjectsServiceErrorResponseType": {
+      "body": {
+        "status": "string",
+        "title": "string",
+        "o:errorDetails": [
+          {
+            "detail": "string",
+            "o:errorCode": "string"
+          }
+        ]
+      },
+      "status": "number"
+    },
+    "createWorkOrderRequest": {
+      "grossShipmentWeight": "string",
+      "item": "string",
+      "itemDescription": "string",
+      "operationQuantity": "number",
+      "shipmentNumber": "string",
+      "shipmentStatus": "string",
+      "shippedQuantity": "number",
+      "unitItemWeight": "string",
+      "workOrder": "number"
+    }
+  },
+  "eventListeners": {
+    "backButtonClicked": {
+      "chains": [
+        {
+          "chainId": "goBackChain"
+        }
+      ]
+    },
+    "saveButtonClicked": {
+      "chains": [
+        {
+          "chainId": "createWorkOrderChain"
+        }
+      ]
+    },
+    "toggleDrawer": {
+      "chains": [
+        {
+          "chainId": "application:toggleDrawerHandler"
+        }
+      ]
+    }
+
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-form-layout": {
+        "path": "ojs/ojformlayout"
+      },
+      "oj-input-number": {
+        "path": "ojs/ojinputnumber"
+      },
+      "oj-input-text": {
+        "path": "ojs/ojinputtext"
+      },
+      "oj-toolbar": {
+        "path": "ojs/ojtoolbar"
+      },
+      "oj-validation-group": {
+        "path": "ojs/ojvalidationgroup"
+      }
+    }
+  }
+}

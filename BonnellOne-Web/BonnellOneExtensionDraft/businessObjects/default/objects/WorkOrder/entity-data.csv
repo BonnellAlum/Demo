@@ -1,0 +1,4 @@
+id,creationDate,lastUpdateDate,createdBy,lastUpdatedBy,workOrder,item,itemDescription,operationQuantity,unitItemWeight,shippedQuantity,shipmentStatus,shipmentNumber,grossShipmentWeight
+1,2023-05-06T00:03:27,2023-05-06T00:03:27.016,barbara.stephenson@bonnellaluminum.com,barbara.stephenson@bonnellaluminum.com,1000001.0,BON-100003,Item 1,1.0,51 LB,0.0,Open,100000,9987 LB
+2,2023-05-06T00:04:40,2023-05-06T00:04:40.005,barbara.stephenson@bonnellaluminum.com,barbara.stephenson@bonnellaluminum.com,1000003.0,BON-10003,item2,34.0,50 LB,0.0,Open,10004,444 LB
+3,2023-05-06T00:14:13,2023-05-06T00:14:13.025,barbara.stephenson@bonnellaluminum.com,barbara.stephenson@bonnellaluminum.com,123456.0,BON-123456,item3,33.0,900 LB,1.0,Closed,10032434,344 LB

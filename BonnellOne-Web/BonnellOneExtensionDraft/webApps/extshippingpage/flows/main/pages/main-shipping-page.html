@@ -1,0 +1,75 @@
+<!-- Mobile only header and page title -->
+<header role="banner" class="oj-sm-flex-initial vb-web-applayout-header oj-md-hide">
+  <div role="image" class="vb-web-applayout-header-image-stripe"></div>
+  <div class="oj-flex-bar oj-sm-align-items-center vb-web-applayout-header-content">
+    <!-- Navigator toggle button will render only if we have a drawer -->
+    <oj-bind-if test="[[ document.querySelector('oj-vb-fragment[name=\'shell-drawer\']') ]]">
+      <div class="oj-flex-bar">
+        <oj-button on-oj-action="[[$listeners.toggleDrawer]]" chroming="borderless"
+                   display="icons">
+          <span slot="startIcon" class="oj-ux-ico-menu"></span>
+          <span><oj-bind-text value="[[$application.translations.app.app_title_navigation_drawer]]"></oj-bind-text></span>
+        </oj-button>
+      </div>
+    </oj-bind-if>
+    <!-- Page specific title and actions with overflow menu displayed -->
+    <div class="oj-sm-margin-2x-horizontal oj-sm-align-items-center oj-md-hide oj-sm-flex-1">
+      <div class="vb-content-header oj-flex oj-sm-flex-items-initial oj-sm-align-items-center">
+        <div class="oj-flex-item">
+          <div class="oj-typography-body-lg oj-typography-semi-bold">
+            <oj-bind-text value="main"></oj-bind-text>
+          </div>
+          <!-- Add Page specific actions etc -->
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Page specific title and actions for desktop formfactor -->
+<div class="vb-content-header oj-flex oj-sm-flex-1 oj-sm-only-hide oj-sm-align-items-center">
+  <div class="oj-flex-item">
+    <div class="oj-typography-body-lg oj-typography-semi-bold">
+      <oj-tab-bar edge="bottom" id="oj-tab-bar--1869269624-1" display="icons" class="oj-tabbar-item-dividers">
+        <ul>
+          <li id="oj-tab-bar--1869269624-1-tab-1">
+        <a href="#" id="oj-tab-bar--1869269624-1-tab-1-tab">Shipping</a>
+          </li>
+          <li id="oj-tab-bar--1869269624-1-tab-2">
+        <a href="#" id="oj-tab-bar--1869269624-1-tab-2-tab">Receiving</a>
+          </li>
+          <li id="oj-tab-bar--1869269624-1-tab-3">
+        <a href="#" id="oj-tab-bar--1869269624-1-tab-3-tab">Reports</a>
+          </li>
+        </ul>
+        <template slot="itemTemplate">
+          <oj-table scroll-policy="loadMoreOnScroll"></oj-table>
+        </template>
+      </oj-tab-bar>
+    </div>
+    <!-- Add Page specific actions etc -->
+  </div>
+</div>
+<div class="oj-flex">
+  <oj-radioset label-hint="Transfer from H11 to P2"
+    class="oj-flex-item oj-sm-12 oj-choice-direction-row oj-md-5">
+    <oj-option value="option1">Option 1</oj-option>
+  </oj-radioset>
+  <div class="oj-flex-item oj-sm-12 oj-md-1"></div>
+  <oj-radioset label-hint="Transfer from P2 to H11" class="oj-flex-item oj-sm-12 oj-md-4">
+    <oj-option value="option1">Option 1</oj-option>
+  </oj-radioset>
+</div>
+<div class="oj-flex">
+  <oj-toolbar id="oj-toolbar-for-oj-table-132891682-1" chroming="solid" class="oj-flex-item oj-sm-12 oj-md-12">
+    <oj-button on-oj-action="[[$listeners.createWorkOrderButtonClicked2]]">Create</oj-button>
+  </oj-toolbar>
+</div>
+<div class="oj-flex">
+  <oj-table scroll-policy="loadMoreOnScroll" class="oj-flex-item oj-sm-12 oj-md-10"
+    data="[[$variables.workOrderListSDP2]]"
+    columns='[{"headerText":"Work Order","field":"workOrder"},{"headerText":"Item","field":"item"},{"headerText":"Item Description","field":"itemDescription"},{"headerText":"Operation Quantity","field":"operationQuantity"},{"headerText":"Unit Item Weight","field":"unitItemWeight"},{"headerText":"Shipped Quantity","field":"shippedQuantity"},{"headerText":"Shipment Status","field":"shipmentStatus"},{"headerText":"Shipment Number","field":"shipmentNumber"},{"headerText":"Gross Shipment Weight","field":"grossShipmentWeight"}]'
+    id="oj-table-132891682-1"></oj-table>
+</div>
+
+

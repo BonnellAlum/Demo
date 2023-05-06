@@ -1,0 +1,112 @@
+{
+    "fields": [
+        {
+            "type": "number",
+            "name": "id",
+            "internal": false,
+            "key": true,
+            "oid": "5958dbaf-643f-483e-ad66-cd878f16628b",
+            "required": true,
+            "unique": true,
+            "displayLabel": "Id"
+        },
+        {
+            "type": "datetime",
+            "name": "creationDate",
+            "internal": false,
+            "oid": "462bdecb-c6a4-4723-be91-2d777816de68",
+            "displayLabel": "Created",
+            "historyType": "timeCreated"
+        },
+        {
+            "type": "datetime",
+            "name": "lastUpdateDate",
+            "internal": false,
+            "oid": "45c0193d-8ff1-419d-af35-2677eb728e9c",
+            "displayLabel": "Last Updated",
+            "historyType": "timeUpdated"
+        },
+        {
+            "type": "string",
+            "name": "createdBy",
+            "internal": false,
+            "oid": "63c7b959-dcd8-4eab-986b-6b3e27f6a481",
+            "displayLabel": "Created By",
+            "historyType": "createdBy"
+        },
+        {
+            "type": "string",
+            "name": "lastUpdatedBy",
+            "internal": false,
+            "oid": "de03e550-88a3-4f15-832a-6144719302e8",
+            "displayLabel": "Last Updated By",
+            "historyType": "updatedBy"
+        },
+{
+            "type": "number",
+            "name": "versionNumber",
+            "internal": false,
+            "oid": "5f39641c-e5fa-4987-a5c7-ff690207e36f",
+            "displayLabel": "Version Number",
+            "historyType": "versionNumber"
+        },
+        {
+            "type": "number",
+            "name": "workOrder",
+            "oid": "e2a77692-3fac-4911-8ad6-02c6793d0e6a",
+            "required": true,
+            "displayLabel": "Work Order"
+        }        ,
+        {
+            "type": "string",
+            "name": "item",
+            "oid": "63e46b8b-f104-44a1-b05a-94124fa7b914",
+            "displayLabel": "Item"
+        }        ,
+        {
+            "type": "string",
+            "name": "itemDescription",
+            "oid": "dbdd05b0-604e-436a-aa69-eb2f05269246",
+            "displayLabel": "Item Description"
+        }        ,
+        {
+            "type": "number",
+            "name": "operationQuantity",
+            "oid": "ebfe5206-a005-4b78-abea-3f6bf0b56ceb",
+            "displayLabel": "Operation Quantity"
+        }        ,
+        {
+            "type": "string",
+            "name": "unitItemWeight",
+            "oid": "e53848fe-c1af-4431-b6eb-5474d6814cae",
+            "displayLabel": "Unit Item Weight"
+        }        ,
+        {
+            "type": "number",
+            "name": "shippedQuantity",
+            "oid": "7b6053d1-133f-4756-9a3f-666a6585c98f",
+            "displayLabel": "Shipped Quantity"
+        }        ,
+        {
+            "type": "string",
+            "name": "shipmentStatus",
+            "oid": "7cbfd471-c0e4-4155-911c-c60cc6a97bba",
+            "displayLabel": "Shipment Status"
+        }        ,
+        {
+            "type": "string",
+            "name": "shipmentNumber",
+            "oid": "997f1b20-0311-4fb8-8d17-a53e4190efa7",
+            "displayLabel": "Shipment Number"
+        }        ,
+        {
+            "type": "string",
+            "name": "grossShipmentWeight",
+            "oid": "b81ca10b-ac83-4bd7-9ebe-4293978f2588",
+            "displayLabel": "Gross Shipment Weight"
+        }
+    ],
+    "name": "WorkOrder",
+    "oid": "0a9cb8ae-e419-4d11-be5c-4fa024d54923",
+    "displayLabel": "Work Order"
+}

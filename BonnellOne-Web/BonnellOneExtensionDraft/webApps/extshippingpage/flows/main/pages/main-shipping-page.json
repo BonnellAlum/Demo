@@ -1,0 +1,114 @@
+{
+  "title": "main",
+  "description": "",
+  "variables": {
+    "workOrderListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_WorkOrder",
+        "keyAttributes": "id",
+        "itemsPath": "items",
+        "responseType": "getallWorkOrderResponse"
+      }
+    },
+    "workOrderListSDP2": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_WorkOrder",
+        "keyAttributes": "id",
+        "itemsPath": "items",
+        "responseType": "getallWorkOrderResponse2"
+      }
+    }
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getallWorkOrderResponse": {
+      "endpoint": "getall_WorkOrder",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallWorkOrderResponse2": {
+      "endpoint": "getall_WorkOrder",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "getallWorkOrderResponse": {
+      "items": [
+        {
+          "id": "number",
+          "item": "string",
+          "itemDescription": "string",
+          "operationQuantity": "number",
+          "shipmentNumber": "string",
+          "shipmentStatus": "string",
+          "shippedQuantity": "number",
+          "unitItemWeight": "string",
+          "workOrder": "number"
+        }
+      ]
+    },
+    "getallWorkOrderResponse2": {
+      "items": [
+        {
+          "grossShipmentWeight": "string",
+          "id": "number",
+          "item": "string",
+          "itemDescription": "string",
+          "operationQuantity": "number",
+          "shipmentNumber": "string",
+          "shipmentStatus": "string",
+          "shippedQuantity": "number",
+          "unitItemWeight": "string",
+          "workOrder": "number"
+        }
+      ]
+    }
+  },
+  "eventListeners": {
+    "createWorkOrderButtonClicked": {
+      "chains": [
+        {
+          "chainId": "navigateToCreateWorkOrderChain"
+        }
+      ]
+    },
+    "createWorkOrderButtonClicked2": {
+      "chains": [
+        {
+          "chainId": "navigateToCreateWorkOrderChain2"
+        }
+      ]
+    },
+    "toggleDrawer": {
+      "chains": [
+        {
+          "chainId": "application:toggleDrawerHandler"
+        }
+      ]
+    }
+
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-option": {
+        "path": "ojs/ojoption"
+      },
+      "oj-radioset": {
+        "path": "ojs/ojradioset"
+      },
+      "oj-tab-bar": {
+        "path": "ojs/ojnavigationlist"
+      },
+      "oj-table": {
+        "path": "ojs/ojtable"
+      },
+      "oj-toolbar": {
+        "path": "ojs/ojtoolbar"
+      }
+    }
+  }
+}
